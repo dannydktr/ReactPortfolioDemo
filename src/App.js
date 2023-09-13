@@ -8,9 +8,16 @@ import { Resume } from './components/Resume';
 import { Home } from './components/Home';
 
 const App = () => (
-  <div style={{ color: 'black', padding: '10px', fontSize: '48px' }}>
-    APP
-  </div>
+  <Router>
+    <Switch>
+      <Route path="/resume">
+        <Resume></Resume>
+      </Route>
+      <Route path="/">
+        <Home></Home>
+      </Route>
+    </Switch>
+  </Router>
 );
 
 
